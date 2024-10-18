@@ -1,4 +1,4 @@
-import SketchPad from './Components/Sketchpad';
+import SketchPad from './Components/SketchPad';
 import './App.css';
 
 function App() {

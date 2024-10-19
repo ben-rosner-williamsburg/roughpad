@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import rough from "roughjs/bundled/rough.cjs";
+import FreehandDrawing from "./FreehandDrawing";
 
 const SketchPad = () => {
   const canvasRef = useRef(null);
@@ -12,7 +13,11 @@ const SketchPad = () => {
     rc.rectangle(10, 10, 200, 200); // x, y, width, height
   }, []);
 
-  return <canvas ref={canvasRef} width={800} height={600}></canvas>;
+  return (
+    <div>
+      <FreehandDrawing />
+    </div>
+  );
 };
 
 export default SketchPad;

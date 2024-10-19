@@ -1,12 +1,11 @@
 import React, { useRef, useEffect } from "react";
-import rough from "roughjs/bundled/rough.esm";
+import rough from "roughjs/bundled/rough.cjs";
 
 const SketchPad = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const context = canvas.getContext("2d");
     const rc = rough.canvas(canvas);
 
     // Sample rectangle
